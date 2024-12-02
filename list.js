@@ -18,6 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  
+
+const hoverContainers = document.querySelectorAll('.three-1, .three-2, .three');
+
+hoverContainers.forEach(container => {
+  const video = container.querySelector('.video');
+
+  container.addEventListener('mouseover', () => {
+    video.style.opacity = 1;
+    video.play(); 
+  });
+
+  container.addEventListener('mouseout', () => {
+    video.style.opacity = 0; 
+    video.pause(); 
+    video.currentTime = 0; 
+  });
+});
+
 
   
   
